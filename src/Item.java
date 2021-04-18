@@ -12,7 +12,8 @@ public class Item{
         Scanner in = new Scanner(System.in);
         System.out.println("What's the name you want displayed for the reward?(Can use color codes, example: &c3 Poke Balls):");
         displayName = in.nextLine();
-        System.out.println("What item do you want to display?(item id # or descriptor, example: 5151 or PIXELMON_TOUGA_BERRY):");
+        System.out.println("What item do you want to display?(item id # or descriptor, example: TRIPWIRE_HOOK, or 0131 or PIXELMON_POKE_BALL):");
+        System.out.println("Note: Vanilla minecraft items don't need the \"minecraft:\" part, just the item name with underscores instead of spaces.");
         itemID = in.nextLine();
         System.out.println("How many items do you want displayed?:");
         amount = in.nextInt();
@@ -23,6 +24,7 @@ public class Item{
         chance = in.nextDouble();
         in.nextLine();
         System.out.println("What command do you want to execute when they land on this reward?");
+        System.out.println("(Use \"%Player%\" wherever you would type a player's username. Example: give %Player% PIXELMON_POKE_BALL 1)");
         command = in.nextLine();
     }
 
